@@ -59,22 +59,22 @@ export default function SearchPage() {
         {searchResults?.length === 0 && (
           <p>Nothing found. Try a different query</p>
         )}
-
-        {searchResults && (
-          <>
-            {searchResults.map((image) => (
-              <Image
-                key={image.urls.raw}
-                src={image.urls.raw}
-                alt={image.description}
-                width={250}
-                height={250}
-                className={styles.image}
-              />
-            ))}
-          </>
-        )}
       </div>
+
+      {searchResults && (
+        <>
+          {searchResults.map((image) => (
+            <Image
+              key={image.urls.raw}
+              src={image.urls.raw}
+              alt={image.description}
+              width={250}
+              height={250}
+              className={styles.image}
+            />
+          ))}
+        </>
+      )}
     </div>
   );
 }
